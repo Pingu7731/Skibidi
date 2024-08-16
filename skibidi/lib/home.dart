@@ -10,7 +10,7 @@ class homepage extends StatefulWidget {
 
 class _HomepageState extends State<homepage> {
   bool pressed = true;
-  bool dark = true;
+  bool dark = false;
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +49,16 @@ class _HomepageState extends State<homepage> {
             child: const SizedBox(
               height: 200,
               width: 200,
+              child: Center(
+                child: Text(
+                  'Skibidi',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 194, 194, 194),
+                  ),
+                ),
+              ),
             ),
           ),
         ),

@@ -20,4 +20,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-assets: -assets/diamehdog.mp3
+assets:
+  - diamehdog.mp3

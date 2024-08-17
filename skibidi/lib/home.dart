@@ -31,6 +31,8 @@ class _HomepageState extends State<homepage> {
           onPointerDown: (_) => setState(() {
             pressed = true;
             // player.play(AssetSource('diamehdog.mp3'));
+            player.play(UrlSource(
+                'https://cdn.discordapp.com/attachments/848828454753140746/1274181680005120000/diamehdog.mp3?ex=66c151a9&is=66c00029&hm=b9d8ec42f010fb2505dbc3e709691be115f54e234acea42d52abddd24aa3a2c6&'));
           }),
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 45),

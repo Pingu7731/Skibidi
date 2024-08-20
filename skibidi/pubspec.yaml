@@ -15,12 +15,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
 
 assets:
-  - diamehdog.mp3
-  - gawk hard.mp3
-  - gawksoft.mp3
+  - assets/diamehdog.mp3
+  - assets/gawkhard.mp3
+  - assets/gawksoft.mp3

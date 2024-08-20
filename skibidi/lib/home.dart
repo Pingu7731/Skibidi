@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
@@ -13,6 +15,14 @@ class _HomepageState extends State<homepage> {
   bool pressed = false;
   bool dark = false;
   final player = AudioPlayer();
+  // final random = Random();
+  //create list to for audio
+
+  // final List<String> audiolist = [
+  //   'assets/diamehdog.mp3',
+  //   'assets/gawk hard.mp3',
+  //   'assets/gawksoft.mp3',
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +41,13 @@ class _HomepageState extends State<homepage> {
           onPointerDown: (_) => setState(() {
             pressed = true;
 
-            // player.play(
-            //   UrlSource(
-            //     'https://cdn.discordapp.com/attachments/848828454753140746/1274181680005120000/diamehdog.mp3?ex=66c151a9&is=66c00029&hm=b9d8ec42f010fb2505dbc3e709691be115f54e234acea42d52abddd24aa3a2c6&',
-            //   ),
-            // );
+            // try {
+            //   int randomIndex = random.nextInt(audiolist.length);
+            //   String ranaudio = audiolist[randomIndex];
+            //   player.play(AssetSource(ranaudio));
+            // } catch (e) {
+            //   print("$e cant be played.");
+            // }
             // player.play(
             //   AssetSource(
             //     'gawksoft.mp3',

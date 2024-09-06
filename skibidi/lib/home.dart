@@ -15,14 +15,14 @@ class _HomepageState extends State<homepage> {
   bool pressed = false;
   bool dark = false;
   final player = AudioPlayer();
-  // final random = Random();
-  //create list to for audio
+  final random = Random();
+  // create list to for audio
 
-  // final List<String> audiolist = [
-  //   'assets/diamehdog.mp3',
-  //   'assets/gawk hard.mp3',
-  //   'assets/gawksoft.mp3',
-  // ];
+  final List<String> audiolist = [
+    'assets/diamehdog.mp3',
+    'assets/gawk hard.mp3',
+    'assets/gawksoft.mp3',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +48,11 @@ class _HomepageState extends State<homepage> {
             // } catch (e) {
             //   print("$e cant be played.");
             // }
-            // player.play(
-            //   AssetSource(
-            //     'gawksoft.mp3',
-            //   ),
-            // );
+            player.play(
+              AssetSource(
+                'gawksoft.mp3',
+              ),
+            );
           }),
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 45),

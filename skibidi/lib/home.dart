@@ -19,7 +19,6 @@ class _HomepageState extends State<homepage> {
   // create list to for audio
 
   final List<String> audiolist = [
-    'assets/diamehdog.mp3',
     'assets/gawk hard.mp3',
     'assets/gawksoft.mp3',
   ];
@@ -50,7 +49,7 @@ class _HomepageState extends State<homepage> {
             // }
             player.play(
               AssetSource(
-                'gawksoft.mp3',
+                'gawkhard.mp3',
               ),
             );
           }),

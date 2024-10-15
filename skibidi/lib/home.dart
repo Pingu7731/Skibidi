@@ -4,24 +4,31 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 
-class homepage extends StatefulWidget {
-  const homepage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<homepage> createState() => _HomepageState();
+  State<HomePage> createState() => _HomepageState();
 }
 
-class _HomepageState extends State<homepage> {
+class _HomepageState extends State<HomePage> {
   bool pressed = false;
   bool dark = false;
   final player = AudioPlayer();
-  final random = Random();
+
   // create list to for audio
 
-  final List<String> audiolist = [
-    'assets/gawk hard.mp3',
+  final List audiolist = [
+    'assets/gawkhard.mp3',
     'assets/gawksoft.mp3',
   ];
+
+//creat a function for getting random audio
+  String getRandomAudio() {
+    final random = Random();
+    int ranIndex = random.nextInt(audiolist.length);
+    return audiolist[ranIndex];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,16 +47,9 @@ class _HomepageState extends State<homepage> {
           onPointerDown: (_) => setState(() {
             pressed = true;
 
-            // try {
-            //   int randomIndex = random.nextInt(audiolist.length);
-            //   String ranaudio = audiolist[randomIndex];
-            //   player.play(AssetSource(ranaudio));
-            // } catch (e) {
-            //   print("$e cant be played.");
-            // }
             player.play(
               AssetSource(
-                'gawkhard.mp3',
+                getRandomAudio(),
               ),
             );
           }),

@@ -24,11 +24,11 @@ class _HomepageState extends State<HomePage> {
   ];
 
 //creat a function for getting random audio
-  String getRandomAudio() {
-    final random = Random();
-    int ranIndex = random.nextInt(audiolist.length);
-    return audiolist[ranIndex];
-  }
+  // String getRandomAudio() {
+  //   final random = Random();
+  //   int ranIndex = random.nextInt(audiolist.length);
+  //   return audiolist[ranIndex];
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -40,16 +40,17 @@ class _HomepageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: backgrouncolor,
       body: Center(
-        child: Listener(
-          onPointerUp: (_) => setState(() {
+        child: GestureDetector(
+          onTapUp: (_) => setState(() {
             pressed = false;
           }),
-          onPointerDown: (_) => setState(() {
+          onTapDown: (_) => setState(() {
             pressed = true;
 
             player.play(
               AssetSource(
-                getRandomAudio(),
+                'gawkhard.mp3',
+                // getRandomAudio(),
               ),
             );
           }),

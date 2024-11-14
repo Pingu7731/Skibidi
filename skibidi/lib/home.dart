@@ -19,16 +19,16 @@ class _HomepageState extends State<HomePage> {
   // create list to for audio
 
   final List audiolist = [
-    'assets/gawkhard.mp3',
-    'assets/gawksoft.mp3',
+    'gawkhard.mp3',
+    'gawksoft.mp3',
   ];
 
-//creat a function for getting random audio
-  // String getRandomAudio() {
-  //   final random = Random();
-  //   int ranIndex = random.nextInt(audiolist.length);
-  //   return audiolist[ranIndex];
-  // }
+// creat a function for getting random audio
+  String getRandomAudio() {
+    final random = Random();
+    int ranIndex = random.nextInt(audiolist.length);
+    return audiolist[ranIndex];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,10 +48,8 @@ class _HomepageState extends State<HomePage> {
             pressed = true;
 
             player.play(
-              AssetSource(
-                'gawkhard.mp3',
-                // getRandomAudio(),
-              ),
+              AssetSource(getRandomAudio() // getRandomAudio(),
+                  ),
             );
           }),
           child: AnimatedContainer(
